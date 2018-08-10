@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Konversi Suhu"
+        android:textAlignment="center"
+        android:textColor="#3b3737"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/nilai_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nilai" />
+
+    <Spinner
+        android:id="@+id/spinner_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Spinner
+        android:id="@+id/spinner_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <TextView
+        android:id="@+id/hasil_ts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Hasil"></TextView>
+
+</LinearLayout>
