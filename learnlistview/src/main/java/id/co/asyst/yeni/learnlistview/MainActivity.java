@@ -2,23 +2,23 @@ package id.co.asyst.yeni.learnlistview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import id.co.asyst.yeni.learnlistview.fragments.InputBottomSheet;
+import id.co.asyst.yeni.learnlistview.adapter.PersonAdapter;
+import id.co.asyst.yeni.learnlistview.model.Person;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener, AdapterView.OnItemLongClickListener, InputBottomSheet.OnSubmitButtonListener {
+public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     ArrayList<String> listNama = new ArrayList<String>();
     ArrayAdapter arrayAdapter;
+
+    ArrayList<Person> listPerson = new ArrayList<>();
 
     EditText inputNameET;
     Button buttonAdd;
@@ -39,17 +39,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listNama.add("Evi");
         listNama.add("Feby");
 
+        //ngambil listperson
+        for (int i = 0; i < 10; i++) {
+            Person person = new Person("Nama ke " + i, "Alamat ke " + i);
+            listPerson.add(person);
+        }
 
-        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listNama);
+        //nampilin listperson
+        PersonAdapter personAdapter = new PersonAdapter(this, listPerson);
+        listView.setAdapter(personAdapter);
+
+        /*arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listNama);
         listView.setAdapter(arrayAdapter);
-
 
         listView.setOnItemLongClickListener(this);
         buttonAdd.setOnClickListener(this);
-
+*/
     }
 
-    @Override
+
+//JIKA LONG PRESS MUNCUL BOTTOMSHEET EDIT
+  /*  @Override
     public void onClick(View v) {
         if (!inputNameET.getText().toString().equalsIgnoreCase("")) {
             listNama.add(inputNameET.getText().toString());
@@ -76,5 +86,5 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onSubmitButton(String name, int position) {
         listNama.set(position, name);
         arrayAdapter.notifyDataSetChanged();
-    }
+    }*/
 }
