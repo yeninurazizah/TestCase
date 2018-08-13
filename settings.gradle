@@ -1,1 +1,1 @@
-include ':app', ':learnlistview', ':covertersuhu'
+include ':app', ':learnlistview', ':covertersuhu', ':learnrecycleview'
