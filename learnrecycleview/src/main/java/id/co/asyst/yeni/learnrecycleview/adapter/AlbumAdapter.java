@@ -75,6 +75,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         void onItemClickListener(AlbumModel albumModel);
     }
 
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView albumIV;
@@ -87,6 +88,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             albumIV = itemView.findViewById(R.id.album_imgview);
             albumTV = itemView.findViewById(R.id.album_tv);
             artisTV = itemView.findViewById(R.id.artis_tv);
+
             cardView = itemView.findViewById(R.id.card_view);
         }
     }

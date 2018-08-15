@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/covertersuhu" />
             <option value="$PROJECT_DIR$/learnlistview" />
             <option value="$PROJECT_DIR$/learnrecycleview" />
+            <option value="$PROJECT_DIR$/learnsession" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
