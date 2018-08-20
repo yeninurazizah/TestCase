@@ -1,1 +1,1 @@
-include ':app', ':learnlistview', ':covertersuhu', ':learnrecycleview', ':learnsession'
+include ':app', ':learnlistview', ':covertersuhu', ':learnrecycleview', ':learnsession', ':learnfirebase'
