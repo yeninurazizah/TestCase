@@ -42,11 +42,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         submitBtn.setOnClickListener(this);
 
+//edit text
         String name = sessionUtils.loadName();
         String address = sessionUtils.loadAddress();
         nameET.setText(name);
         addressET.setText(address);
 
+//radio group
         String gender = sessionUtils.loadGender();
         if (gender.equalsIgnoreCase("Male")) {
             radioMale.setChecked(true);
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             radioFemale.setChecked(true);
         }
 
-
+//spinner
         String edu = sessionUtils.loadEdu();
         for (int i = 0; i < educationSP.getAdapter().getCount(); i++) {
             if (educationSP.getAdapter().getItem(i).toString().equalsIgnoreCase(edu)) {
